@@ -4,3 +4,25 @@ author: "Ma Sun Yan Joanna"
 date: 10 Apr 2024
 output: html_document
 ---
+
+```{r setup, include = TRUE, echo = FALSE}
+
+knitr::opts_chunk$set(
+  echo = FALSE,
+  message = FALSE,
+  warning = FALSE)
+```
+
+
+```{r}
+
+library(tidyverse)
+library(palmerpenguins)
+
+data(package = "palmerpenguins")
+
+ggplot(penguins, aes(x = bill_depth_mm, y = flipper_length_mm, color = species)) +
+    geom_point()
+
+```
+
